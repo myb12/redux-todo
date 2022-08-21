@@ -3,18 +3,18 @@
     {
       "id": 1,
       "text": "Learn Vanilla JavaScript",
-      "completed": true,
+      "completed": false,
       "color": "yellow"
     },
     {
       "id": 3,
       "text": "Learn React JS",
-      "completed": true,
+      "completed": false,
       "color": "yellow"
     },
     {
       "text": "Learn Redux Basics",
-      "completed": false,
+      "completed": true,
       "id": 4,
       "color": "red"
     },
@@ -26,7 +26,7 @@
     },
     {
       "text": "learn Redux",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {

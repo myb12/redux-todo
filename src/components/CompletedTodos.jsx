@@ -1,10 +1,11 @@
 import React from 'react';
-import notes from '../assets/images/notes.png'
 import tick from '../assets/images/double-tick.png'
-import cancel from '../assets/images/cancel.png'
 import Todo from './Todo';
+import { useSelector } from 'react-redux';
 
 const CompletedTodos = () => {
+    const todos = useSelector(state => state.todos);
+
     const todo = {
         id: 2,
         text: "Learn Modern ES6+ JavaScript",
@@ -12,7 +13,7 @@ const CompletedTodos = () => {
         color: "red"
     }
     return (
-        <div class="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
+        <div class="grid place-items-center bg-blue-100 py-5 px-6 font-sans">
 
 
             <div class="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
@@ -34,8 +35,9 @@ const CompletedTodos = () => {
 
                 {/* <!-- todo list --> */}
                 <div class="mt-2 text-gray-700 text-sm max-h-[300px] overflow-y-auto">
-
-                    <Todo todo={todo} allCompleted />
+                    {
+                        todos.filter(todo => todo.completed).map(todo => <Todo key={todo.id} todo={todo} allCompleted />)
+                    }
                 </div>
 
                 <hr class="mt-4" />
