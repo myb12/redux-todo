@@ -13,16 +13,16 @@ const CompletedTodos = () => {
         color: "red"
     }
     return (
-        <div class="grid place-items-center bg-blue-100 py-5 px-6 font-sans">
+        <div className="grid place-items-center bg-blue-100 py-5 px-6 font-sans">
 
 
-            <div class="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
+            <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
                 {/* <!-- header --> */}
                 <div>
-                    <ul class="flex justify-between my-4 text-xs text-gray-500">
-                        <li class="flex space-x-1 cursor-pointer">
+                    <ul className="flex justify-between my-4 text-xs text-gray-500">
+                        <li className="flex space-x-1 cursor-pointer">
                             <img
-                                class="w-4 h-4"
+                                className="w-4 h-4"
                                 src={tick}
                                 alt="Complete"
                             />
@@ -31,16 +31,16 @@ const CompletedTodos = () => {
                     </ul>
                 </div>
 
-                <hr class="mt-4" />
+                <hr className="mt-4" />
 
                 {/* <!-- todo list --> */}
-                <div class="mt-2 text-gray-700 text-sm max-h-[300px] overflow-y-auto">
+                <div className="mt-2 text-gray-700 text-sm max-h-[300px] overflow-y-auto">
                     {
                         todos.filter(todo => todo.completed).map(todo => <Todo key={todo.id} todo={todo} allCompleted />)
                     }
                 </div>
 
-                <hr class="mt-4" />
+                <hr className="mt-4" />
 
             </div>
         </div>

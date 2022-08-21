@@ -4,10 +4,11 @@ import cancelImage from "../assets/images/cancel.png";
 import deleteTodo from "../redux/todos/thunk/deleteTodo";
 import updateColor from "../redux/todos/thunk/updateColor";
 import updateStatus from "../redux/todos/thunk/updateStatus";
+import updateTodo from "../redux/todos/thunk/updateTodo";
 
 export default function Todo({ todo, allCompleted }) {
     const [editClicked, setEditClicked] = useState(false);
-    const [editText, setEditText] = useState(false);
+    const [editText, setEditText] = useState('  ');
 
     const dispatch = useDispatch();
 
@@ -36,7 +37,10 @@ export default function Todo({ todo, allCompleted }) {
     const handleUpdate = (e) => {
         e.preventDefault();
 
-        console.log(editText)
+        if (editText.length) {
+            dispatch(updateTodo(id, editText));
+        }
+        setEditClicked(false);
     };
 
     return (

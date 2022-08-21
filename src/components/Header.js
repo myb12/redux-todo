@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import tickImage from "../assets/images/double-tick.png";
 import noteImage from "../assets/images/notes.png";
 import plusImage from "../assets/images/plus.png";
 import { allCompleted, clearCompleted } from "../redux/todos/actions";
@@ -50,10 +49,13 @@ export default function Header() {
 
             <ul className="flex justify-between my-4 text-xs text-gray-500">
                 <li
-                    className="flex space-x-1 cursor-pointer"
+                    className="flex items-center space-x-1 cursor-pointer"
                     onClick={completeHadler}
                 >
-                    <img className="w-4 h-4" src={tickImage} alt="Complete" />
+                    <svg className="w-3 h-3" stroke="currentColor" fill="#000000" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12c0-2.76 1.12-5.26 2.93-7.07L12 12V2c5.52 0 10 4.48 10 10z"></path>
+                    </svg>
                     <span>Incompleted Tasks</span>
                 </li>
                 <li className="cursor-pointer" onClick={clearHeandler}>

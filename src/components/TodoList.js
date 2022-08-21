@@ -12,7 +12,19 @@ export default function TodoList() {
         dispatch(fetchTodos);
     }, [dispatch]);
 
-    const filterByStatus = (todo) => !todo.completed;
+    const filterByStatus = (todo) => {
+        const { status } = filters;
+        switch (status) {
+            case "Complete":
+                return todo.completed;
+
+            case "Incomplete":
+                return !todo.completed;
+
+            default:
+                return true;
+        }
+    };
 
     const filterByColors = (todo) => {
         const { colors } = filters;
