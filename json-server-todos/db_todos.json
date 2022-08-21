@@ -7,12 +7,6 @@
       "color": "yellow"
     },
     {
-      "id": 2,
-      "text": "Learn Modern ES6+ JavaScript",
-      "completed": true,
-      "color": "red"
-    },
-    {
       "id": 3,
       "text": "Learn React JS",
       "completed": true,
@@ -20,13 +14,13 @@
     },
     {
       "text": "Learn Redux Basics",
-      "completed": true,
+      "completed": false,
       "id": 4,
       "color": "red"
     },
     {
       "text": "Learn Redux fundamentals",
-      "completed": true,
+      "completed": false,
       "id": 5,
       "color": "red"
     },
