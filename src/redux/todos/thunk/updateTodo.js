@@ -2,7 +2,7 @@ import { todoUpdated } from "../actions";
 
 const updateTodo = (todoId, text) => {
     return async (dispatch) => {
-        await fetch(`http://localhost:9000/todos/${todoId}`, {
+        await fetch(`https://json-server-todos.herokuapp.com/todos/${todoId}`, {
             method: "PATCH",
             body: JSON.stringify({
                 text

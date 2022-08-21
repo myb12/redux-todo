@@ -6,12 +6,6 @@ import { useSelector } from 'react-redux';
 const CompletedTodos = () => {
     const todos = useSelector(state => state.todos);
 
-    const todo = {
-        id: 2,
-        text: "Learn Modern ES6+ JavaScript",
-        completed: true,
-        color: "red"
-    }
     return (
         <div className="grid place-items-center bg-blue-100 py-5 px-6 font-sans">
 
